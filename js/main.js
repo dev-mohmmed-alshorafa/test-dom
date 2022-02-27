@@ -8,6 +8,7 @@ let logoBtnD = document.querySelector('.logo-btn-d')
 let secImgD = document.querySelector('.sec-img-dark')
 let secImgL = document.querySelector('.sec-img-light')
 let x = document.querySelector('.sec')
+let lastImg = document.querySelector('.last-img')
 
 darkBtn.addEventListener('click', changeToDark)
 function changeToDark() {
@@ -18,6 +19,7 @@ function changeToDark() {
   logoBtnD.classList.toggle('change-img')
   secImgL.classList.toggle('change-img')
   secImgD.classList.toggle('change-img')
+  lastImg.classList.toggle('footer-img')
 
   changeSection()
 }
