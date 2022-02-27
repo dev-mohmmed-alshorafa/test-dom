@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.3s linear all;
+}
+.dark {
+  background: #464646;
+  color: white;
+}
+.c {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+}
+.dark-btn {
+  display: block;
+}
+.logo {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 50px;
+}
+.logo-btn {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  position: relative;
+  bottom: 20px;
+}
+.btn-img {
+  width: 120px;
+}
+.btn-img-light {
+  width: 90px;
+  margin-bottom: 17px;
+  transform: rotateY(180deg);
+}
+.change-img {
+  display: none;
+}
