@@ -108,3 +108,25 @@ footer {
 .change-img {
   display: none !important;
 }
+.footer-img {
+  position: relative;
+  transform: rotateY(180deg);
+  width: 80px;
+  animation-name: exam;
+  animation-duration: 50s;
+  animation-iteration-count: 3000;
+}
+@keyframes exam {
+  0% {
+    left: 0;
+  }
+  25% {
+    left: 300px;
+  }
+  50% {
+    transform: rotateY(0);
+  }
+  100% {
+    left: 0;
+  }
+}
