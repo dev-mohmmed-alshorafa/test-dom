@@ -1,4 +1,3 @@
-let dark = document.querySelector('.dark')
 let body = document.querySelector('body')
 let darkBtn = document.querySelector('.dark-btn')
 let changeImgL = document.querySelector('.st-img-light')
@@ -9,8 +8,8 @@ let secImgD = document.querySelector('.sec-img-dark')
 let secImgL = document.querySelector('.sec-img-light')
 let x = document.querySelector('.sec')
 let lastImg = document.querySelector('.last-img')
-
-darkBtn.addEventListener('click', changeToDark)
+console.log(darkBtn)
+darkBtn.addEventListener('click', switchTheme)
 function changeToDark() {
   body.classList.toggle('dark')
   changeImgL.classList.toggle('change-img')
@@ -30,4 +29,27 @@ function changeSection() {
     x.style.justifyContent = 'flex-end'
     // x.style.justifyContent === 'flex-end'
   }
+}
+
+function switchTheme() {
+  // Get the value of the "dark" item from the local storage on every click
+  darkMode = localStorage.getItem('dark')
+
+  if (darkMode !== 'on') {
+    //   Set the value of the item to "on" when dark mode is on
+    changeToDark()
+    darkMode = localStorage.setItem('dark', 'on')
+  } else {
+    //   Set the value of the item to  "null" when dark mode if off
+    changeToDark()
+    darkMode = localStorage.setItem('dark', 'off')
+  }
+}
+
+// Get the value of the "dark" item from the local storage
+let darkMode = localStorage.getItem('dark')
+
+// check dark mode is on or off on page reload
+if (darkMode === 'on') {
+  changeToDark()
 }

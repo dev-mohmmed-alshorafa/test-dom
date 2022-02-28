@@ -8,7 +8,7 @@ body {
   background-color: rgb(105, 148, 189);
 }
 .dark {
-  background: #464646;
+  background: #141414;
   color: white;
 }
 .c {
@@ -48,7 +48,7 @@ main {
 .sec {
   display: flex;
   width: 500px;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .sec img {
   display: block;
@@ -106,6 +106,7 @@ footer {
   width: 500px;
 }
 .change-img {
+  opacity: 0;
   display: none !important;
 }
 .footer-img {
